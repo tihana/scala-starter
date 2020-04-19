@@ -38,4 +38,10 @@ tasks.withType(Test) {
     maxParallelForks = 1
 }
 
+task run(type: JavaExec) {
+    description = 'Run the main class with JavaExec task'
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'org.tihana.Solution'
+}
+
 defaultTasks 'clean', 'scalaStyle', 'test'
